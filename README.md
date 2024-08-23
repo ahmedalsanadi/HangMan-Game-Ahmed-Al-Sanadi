@@ -14,6 +14,7 @@ Example of what we want to accomplish [here](https://codepen.io/cathydutton/pen/
     4. Add a counter from 10 that will decrease by 1 with every wrong guess.
     4. Add a button to play again.
 
+
 2. JS:
     1. At the beginning use fetch API to retrieve a random word from this api https://random-word-api.herokuapp.com/word?number=1. Make the blanks equal the number of letters in the random word.
     2. Everytime the user clicks on one of the letters the following should happen:
