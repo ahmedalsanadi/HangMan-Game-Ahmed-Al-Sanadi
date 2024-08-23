@@ -1,14 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
-  
+  <main class="container">
+
+    <header class="header-conatainer">
+      <h1 class="header-title">HANGMAN</h1>
+      <p class="slogan">Guess the word to save a life.</p>
+      <p class="instructions-p">Use the alphabet below to guess the word, or click hint to get a clue.</p>
+    </header>
+
+    <section class="alphabet-buttons-container" data-aos="fade-left">
+
+      <button class="letter-btn">a</button>
+      <button class="letter-btn">b</button>
+      <button class="letter-btn">c</button>
+      <button class="letter-btn">d</button>
+      <button class="letter-btn">e</button>
+      <button class="letter-btn">f</button>
+      <button class="letter-btn">g</button>
+      <button class="letter-btn">h</button>
+      <button class="letter-btn">i</button>
+      <button class="letter-btn">j</button>
+      <button class="letter-btn">k</button>
+      <button class="letter-btn">l</button>
+      <button class="letter-btn">m</button>
+      <button class="letter-btn">n</button>
+      <button class="letter-btn">o</button>
+      <button class="letter-btn">p</button>
+      <button class="letter-btn">q</button>
+      <button class="letter-btn">r</button>
+      <button class="letter-btn">s</button>
+      <button class="letter-btn">t</button>
+      <button class="letter-btn">u</button>
+      <button class="letter-btn">v</button>
+      <button class="letter-btn">w</button>
+      <button class="letter-btn">x</button>
+      <button class="letter-btn">y</button>
+      <button class="letter-btn">z</button>
+
+    </section>
+
+    <section class="word-to-guess-conatiner" data-aos="fade-right">
+      <p class="hint-p">The Chosen Category Is Cities</p>
+      <p class="word-to-guess">_ _ n _ h e s _ e r</p>
+    </section>
+
+    <h2 class="game-over">Game Over</h2>
+
+
+    <figure class="hangman-figure-container" data-aos="zoom-in-up">
+      <img class="hangman-img" src="images/step1010.png" alt="HANGMAN">
+    </figure>
+
+    <div class="help-play-agani-btn-container">
+      <button class="hint-btn">Hint</button>
+      <button class="play-again-btn">Play again</button>
+    </div>
+
+  </main>
+
 
   <script src="./scripts/script.js"></script>
+  <!--Animation Script-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 200,
+      delay: 400,
+      mirror: "false",
+      once: "true"
+    });
+  </script>
 </body>
+
 </html>
