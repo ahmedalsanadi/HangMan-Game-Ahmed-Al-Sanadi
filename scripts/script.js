@@ -83,8 +83,8 @@ function createAlphabetKeys(lettersArray) {
 
 
 function onLetterClick(letterBtn, letter) {
-    letterBtn.classList.add("disabled-button"); // to disable the clicked btn from working again
-    const currentValueOfAnswer = answerField.textContent; // get the current value of answer
+    letterBtn.classList.add("disabled-button"); 
+    const currentValueOfAnswer = answerField.textContent; 
     const currentLetterAnswerArray = currentValueOfAnswer.split(" "); // create an array with letters of current answer
     const randomWordArray = randomWord.split("");
 
@@ -144,18 +144,16 @@ function updateLetters(randomWordArr, letter) {
 
 
 function resetGame() {
-    lifeCounter = 10; // Reset life counter
-    lifeOnDanger = 0; // Reset life on danger count
-    wrongLetters.length = 0; // Clear the wrong letters array
-    remainingLifesSpan.innerHTML = lifeCounter; // Update the life count display
-    HangmanImg.src = "./images/step0.png"; // Reset hangman image to the initial stage
-
-    // Clear the alphabet button classes (enable buttons again)
+    lifeCounter = 10; 
+    lifeOnDanger = 0; 
+    wrongLetters.length = 0; 
+    remainingLifesSpan.innerHTML = lifeCounter; 
+    HangmanImg.src = "./images/step0.png"; 
     const buttons = document.querySelectorAll(".letter-btn");
     buttons.forEach((btn) => {
         btn.classList.remove("disabled-button");
     });
 
-    // Fetch a new random word and set up the game
-    ControlleringWholeApp(); // Reinitialize the game
+    
+    ControlleringWholeApp(); 
 }
