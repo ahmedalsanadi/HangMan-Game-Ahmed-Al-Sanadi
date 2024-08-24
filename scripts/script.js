@@ -80,44 +80,43 @@ function createAlphabetKeys(lettersArray) {
 
 
 function onLetterClick(letterBtn, letter) {
-	letterBtn.classList.add("disabled-button"); // to disable the clicked btn from working again
-	const currentValueOfAnswer = answerField.textContent; // get the current value of answer
-	const currentLetterAnswerArray = currentValueOfAnswer.split(" "); // create an array with letters of current answer
-	const randomWordArray = randomWord.split("");
+    letterBtn.classList.add("disabled-button"); // to disable the clicked btn from working again
+    const currentValueOfAnswer = answerField.textContent; // get the current value of answer
+    const currentLetterAnswerArray = currentValueOfAnswer.split(" "); // create an array with letters of current answer
+    const randomWordArray = randomWord.split("");
 
-	if (randomWord.includes(letter)) {
-		console.log("true");
-		updateLetters(randomWordArray, letter);
-	} else {
-		lifeOnDanger++;
-		lifeOnDanger = lifeOnDanger <= 10 ? lifeOnDanger : 10;
-		let imgSrc = `./images/step${lifeOnDanger}.png`;
-		HangmanImg.src = imgSrc;
+    if (randomWord.includes(letter)) {
+        console.log("true");
+        updateLetters(randomWordArray, letter);
+    } else {
+        lifeOnDanger++;
+        lifeOnDanger = lifeOnDanger <= 10 ? lifeOnDanger : 10;
+        let imgSrc = `./images/step${lifeOnDanger}.png`;
+        HangmanImg.src = imgSrc;
 
-		lifeCounter--;
-		lifeCounter = lifeCounter >= 0 ? lifeCounter : 0;
-		remainingLifesSpan.innerHTML = lifeCounter;
-		if (lifeCounter === 0) {
-			// Disable all the buttons
-			const buttons = document.querySelectorAll(".letter-btn");
-			buttons.forEach((btn) => btn.classList.add("disabled-button"));
+        lifeCounter--;
+        lifeCounter = lifeCounter >= 0 ? lifeCounter : 0;
+        remainingLifesSpan.innerHTML = lifeCounter;
 
-			// Display the missed letters
-			let newAnswerField = "";
-			const uniqueMissedLetters = new Set();
-			for (let i = 0; i < currentLetterAnswerArray.length; i++) {
-				if (currentLetterAnswerArray[i] === "_" && !randomWordArray.includes(letters[i])) {
-					uniqueMissedLetters.add(letters[i]);
-					newAnswerField += `<span style="color:red;">${letters[i]}</span> `;
-				} else {
-					newAnswerField += `${currentLetterAnswerArray[i]} `;
-				}
-			}
-			answerField.innerHTML = newAnswerField;
-			console.log("Missed letters: " + Array.from(uniqueMissedLetters).join(", "));
-		}
-	}
+        if (lifeCounter === 0) {
+            // Disable all the buttons
+            const buttons = document.querySelectorAll(".letter-btn");
+            buttons.forEach((btn) => btn.classList.add("disabled-button"));
+
+            // Display the missed letters
+            let newAnswerField = "";
+            randomWordArray.forEach((char, index) => {
+                if (currentLetterAnswerArray[index] === "_" && !randomWordArray.includes(currentLetterAnswerArray[index])) {
+                    newAnswerField += `<span style="color:red;">${char}</span> `;
+                } else {
+                    newAnswerField += `${currentLetterAnswerArray[index]} `;
+                }
+            });
+            answerField.innerHTML = newAnswerField.trim();
+        }
+    }
 }
+
 function updateLetters(randomWordArr, letter) {
 	const indices = []; // this will save the indexs where the correct letter is found in the randword word
 
