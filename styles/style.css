@@ -96,7 +96,7 @@ a {
 /* hangman Img section Starts here----------------------------------- */
 
         .hangman-figure-container {
-            max-width: 500px;
+            max-width: 350px;
             width: 100%;
             display: flex;
             align-items: center;
