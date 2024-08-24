@@ -6,6 +6,9 @@ const wrongLetters = [];
 const answerField = document.querySelector(".answer-field "); // where blanks and  correct letters are place
 const HangmanImg = document.querySelector(".hangman-img");
 const remainingLifesSpan = document.querySelector(".life-count");
+document.querySelector(".play-again-btn").addEventListener("click", () => {
+    resetGame();
+});
 const letters = [
 	"a",
 	"b",
@@ -136,4 +139,23 @@ function updateLetters(randomWordArr, letter) {
 
 	// Update the answerField with the updated wordArr
 	answerField.innerHTML = wordArr.map((char) => char).join(" ");
+}
+
+
+
+function resetGame() {
+    lifeCounter = 10; // Reset life counter
+    lifeOnDanger = 0; // Reset life on danger count
+    wrongLetters.length = 0; // Clear the wrong letters array
+    remainingLifesSpan.innerHTML = lifeCounter; // Update the life count display
+    HangmanImg.src = "./images/step0.png"; // Reset hangman image to the initial stage
+
+    // Clear the alphabet button classes (enable buttons again)
+    const buttons = document.querySelectorAll(".letter-btn");
+    buttons.forEach((btn) => {
+        btn.classList.remove("disabled-button");
+    });
+
+    // Fetch a new random word and set up the game
+    ControlleringWholeApp(); // Reinitialize the game
 }
