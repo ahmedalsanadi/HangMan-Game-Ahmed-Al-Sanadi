@@ -66,22 +66,22 @@ function createBlanks(word) {
 }
 
 function createAlphabetKeys(lettersArray) {
-	const alphabetButtonConatainer = document.querySelector(
-		".alphabet-buttons-container"
-	); // contains buttons of letters
-	lettersArray.forEach((letter) => {
-		const letterBtn = document.createElement("button");
-		letterBtn.classList.add("letter-btn"); //for styling
-		letterBtn.id = letter;
-		letterBtn.innerHTML = letter;
-		alphabetButtonConatainer.appendChild(letterBtn);
-		letterBtn.addEventListener("click", () => {
-			onLetterClick(letterBtn, letter);
-		});
-	});
+    const alphabetButtonConatainer = document.querySelector(".alphabet-buttons-container");
+    
+    // Clear the existing buttons before creating new ones
+    alphabetButtonConatainer.innerHTML = "";
+
+    lettersArray.forEach((letter) => {
+        const letterBtn = document.createElement("button");
+        letterBtn.classList.add("letter-btn"); // for styling
+        letterBtn.id = letter;
+        letterBtn.innerHTML = letter;
+        alphabetButtonConatainer.appendChild(letterBtn);
+        letterBtn.addEventListener("click", () => {
+            onLetterClick(letterBtn, letter);
+        });
+    });
 }
-
-
 function onLetterClick(letterBtn, letter) {
     letterBtn.classList.add("disabled-button"); 
     const currentValueOfAnswer = answerField.textContent; 
