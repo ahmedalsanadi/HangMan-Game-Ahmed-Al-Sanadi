@@ -47,12 +47,9 @@ async function ControlleringWholeApp() {
 }
 
 async function fetchRandomWord() {
-	const response = await fetch(
-		"https://random-word-api.herokuapp.com/word?number=1"
-	);
+	const response = await fetch("https://random-word-api.herokuapp.com/word?number=2");
 	const data = await response.json();
-	console.log(data[0]);
-
+	console.log("Random Word is :"+data[0]);
 	return data[0]; // this returns the random word as a string
 }
 function createBlanks(word) {
@@ -80,6 +77,8 @@ function createAlphabetKeys(lettersArray) {
 		});
 	});
 }
+
+
 function onLetterClick(letterBtn, letter) {
 	letterBtn.classList.add("disabled-button"); // to disable the clicked btn from working again
 	const currentValueOfAnswer = answerField.textContent; // get the current value of answer
@@ -102,10 +101,23 @@ function onLetterClick(letterBtn, letter) {
 			// Disable all the buttons
 			const buttons = document.querySelectorAll(".letter-btn");
 			buttons.forEach((btn) => btn.classList.add("disabled-button"));
+
+			// Display the missed letters
+			let newAnswerField = "";
+			const uniqueMissedLetters = new Set();
+			for (let i = 0; i < currentLetterAnswerArray.length; i++) {
+				if (currentLetterAnswerArray[i] === "_" && !randomWordArray.includes(letters[i])) {
+					uniqueMissedLetters.add(letters[i]);
+					newAnswerField += `<span style="color:red;">${letters[i]}</span> `;
+				} else {
+					newAnswerField += `${currentLetterAnswerArray[i]} `;
+				}
+			}
+			answerField.innerHTML = newAnswerField;
+			console.log("Missed letters: " + Array.from(uniqueMissedLetters).join(", "));
 		}
 	}
 }
-
 function updateLetters(randomWordArr, letter) {
 	const indices = []; // this will save the indexs where the correct letter is found in the randword word
 
