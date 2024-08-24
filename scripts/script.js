@@ -1,6 +1,6 @@
 let randomWord = "";
 const wordArr = [];
-let lifeCounter= 0;
+let lifeOnDanger = 0;
 const wrongLetters = [];
 const answerField = document.querySelector(".answer-field "); // where blanks and  correct letters are place
 const HangmanImg = document.querySelector(".hangman-img");
@@ -33,7 +33,6 @@ const letters = [
 	"z",
 ];
 
-
 document.addEventListener("DOMContentLoaded", () => {
 	ControlleringWholeApp();
 });
@@ -50,19 +49,19 @@ async function fetchRandomWord() {
 		"https://random-word-api.herokuapp.com/word?number=1"
 	);
 	const data = await response.json();
-    console.log(data[0]);
-    
+	console.log(data[0]);
+
 	return data[0]; // this returns the random word as a string
 }
 function createBlanks(word) {
-    // recieve random word and print blanks according to its length
-    const randomWordLength = word.length;
-    wordArr.length = 0; // clear the wordArr
-    for (let i = 0; i < randomWordLength; i++) {
-      wordArr.push("_");
-    }
-    answerField.innerHTML = wordArr.join(" "); // to add Empty blanks
-  }
+	// recieve random word and print blanks according to its length
+	const randomWordLength = word.length;
+	wordArr.length = 0; // clear the wordArr
+	for (let i = 0; i < randomWordLength; i++) {
+		wordArr.push("_");
+	}
+	answerField.innerHTML = wordArr.join(" "); // to add Empty blanks
+}
 
 function createAlphabetKeys(lettersArray) {
 	const alphabetButtonConatainer = document.querySelector(
@@ -86,43 +85,39 @@ function onLetterClick(letterBtn, letter) {
 	const currentLetterAnswerArray = currentValueOfAnswer.split(" "); // create an array with letters of current answer
 	const randomWordArray = randomWord.split("");
 
-	if (randomWord.includes(letter)) 
-    {
+	if (randomWord.includes(letter)) {
 		console.log("true");
-        updateLetters(randomWordArray, letter);
-        
-	} 
-    else {
+		updateLetters(randomWordArray, letter);
+	} else {
 		// console.log("false");
-        lifeCounter ++; 
-        let imgSrc =`./images/step${lifeCounter}.png`;
-        HangmanImg.src =imgSrc;
-        console.log(lifeCounter);
-        console.log(imgSrc);
-        // console.log(lifeCounter);
-         
+		lifeOnDanger++;
+		let imgSrc = `./images/step${lifeOnDanger}.png`;
+		HangmanImg.src = imgSrc;
+		// console.log(lifeOnDanger);
+		// console.log(imgSrc);
+		// console.log(lifeCounter);
 	}
 	//  console.log("iam current answer array "+currentLetterAnswerArray);
 	//  console.log("iam randomWordArray "+randomWordArray);
 }
 
 function updateLetters(randomWordArr, letter) {
-    const indices = []; // this will save the indexs where the correct letter is found in the randword word
-  
-    // Find all the indices where the letter appears in the randomWordArr
-    randomWordArr.forEach((char, index) => {
-      if (char === letter) {
-        indices.push(index);
-      }
-    });
-  
-    // Update the wordArr based on the found indices
-    indices.forEach((index) => {
-      if (wordArr[index] === "_") {
-        wordArr[index] = letter;
-      }
-    });
-  
-    // Update the answerField with the updated wordArr
-    answerField.innerHTML = wordArr.map((char) => char).join(" ");
-  }
+	const indices = []; // this will save the indexs where the correct letter is found in the randword word
+
+	// Find all the indices where the letter appears in the randomWordArr
+	randomWordArr.forEach((char, index) => {
+		if (char === letter) {
+			indices.push(index);
+		}
+	});
+
+	// Update the wordArr based on the found indices
+	indices.forEach((index) => {
+		if (wordArr[index] === "_") {
+			wordArr[index] = letter;
+		}
+	});
+
+	// Update the answerField with the updated wordArr
+	answerField.innerHTML = wordArr.map((char) => char).join(" ");
+}
