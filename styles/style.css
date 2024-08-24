@@ -153,6 +153,12 @@
         padding: 15px;
         border-radius: 8px;
     }
+/* --- Disabled buttons ------*/
+    .disabled-button {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
 
 /* Responsive breakpoints ------------------ */
         @media (min-width: 576px) {
