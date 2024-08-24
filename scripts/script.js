@@ -1,9 +1,11 @@
 let randomWord = "";
 const wordArr = [];
 let lifeOnDanger = 0;
+let lifeCounter = 10;
 const wrongLetters = [];
 const answerField = document.querySelector(".answer-field "); // where blanks and  correct letters are place
 const HangmanImg = document.querySelector(".hangman-img");
+const remainingLifesSpan = document.querySelector(".life-count");
 const letters = [
 	"a",
 	"b",
@@ -93,6 +95,8 @@ function onLetterClick(letterBtn, letter) {
 		lifeOnDanger++;
 		let imgSrc = `./images/step${lifeOnDanger}.png`;
 		HangmanImg.src = imgSrc;
+        lifeCounter --;
+        remainingLifesSpan.innerHTML =lifeCounter;
 		// console.log(lifeOnDanger);
 		// console.log(imgSrc);
 		// console.log(lifeCounter);
