@@ -80,7 +80,6 @@ function createAlphabetKeys(lettersArray) {
 		});
 	});
 }
-
 function onLetterClick(letterBtn, letter) {
 	letterBtn.classList.add("disabled-button"); // to disable the clicked btn from working again
 	const currentValueOfAnswer = answerField.textContent; // get the current value of answer
@@ -91,18 +90,20 @@ function onLetterClick(letterBtn, letter) {
 		console.log("true");
 		updateLetters(randomWordArray, letter);
 	} else {
-		// console.log("false");
 		lifeOnDanger++;
+		lifeOnDanger = lifeOnDanger <= 10 ? lifeOnDanger : 10;
 		let imgSrc = `./images/step${lifeOnDanger}.png`;
 		HangmanImg.src = imgSrc;
-        lifeCounter --;
-        remainingLifesSpan.innerHTML =lifeCounter;
-		// console.log(lifeOnDanger);
-		// console.log(imgSrc);
-		// console.log(lifeCounter);
+
+		lifeCounter--;
+		lifeCounter = lifeCounter >= 0 ? lifeCounter : 0;
+		remainingLifesSpan.innerHTML = lifeCounter;
+		if (lifeCounter === 0) {
+			// Disable all the buttons
+			const buttons = document.querySelectorAll(".letter-btn");
+			buttons.forEach((btn) => btn.classList.add("disabled-button"));
+		}
 	}
-	//  console.log("iam current answer array "+currentLetterAnswerArray);
-	//  console.log("iam randomWordArray "+randomWordArray);
 }
 
 function updateLetters(randomWordArr, letter) {
