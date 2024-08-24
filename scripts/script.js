@@ -1,7 +1,9 @@
 let randomWord = "";
 const wordArr = [];
-
+let lifeCounter= 0;
+const wrongLetters = [];
 const answerField = document.querySelector(".answer-field "); // where blanks and  correct letters are place
+const HangmanImg = document.querySelector(".hangman-img");
 const letters = [
 	"a",
 	"b",
@@ -30,6 +32,7 @@ const letters = [
 	"y",
 	"z",
 ];
+
 
 document.addEventListener("DOMContentLoaded", () => {
 	ControlleringWholeApp();
@@ -87,9 +90,17 @@ function onLetterClick(letterBtn, letter) {
     {
 		console.log("true");
         updateLetters(randomWordArray, letter);
+        
 	} 
     else {
-		console.log("false");
+		// console.log("false");
+        lifeCounter ++; 
+        let imgSrc =`./images/step${lifeCounter}.png`;
+        HangmanImg.src =imgSrc;
+        console.log(lifeCounter);
+        console.log(imgSrc);
+        // console.log(lifeCounter);
+         
 	}
 	//  console.log("iam current answer array "+currentLetterAnswerArray);
 	//  console.log("iam randomWordArray "+randomWordArray);

@@ -130,6 +130,7 @@
     .word-to-guess {
         font-size: 2rem;
         margin-bottom: 1.5rem;
+        letter-spacing: 1rem;
     }
 
 /* ---- hint & play again  buttons starts here ------*/
