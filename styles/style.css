@@ -1,139 +1,132 @@
-/*--- pre settings -------*/
-    * {
-        padding: 0px;
-        margin: 0px;
-        box-sizing: border-box;
-    }
-    html,
-    body {
 
-        height: 100%;
-        margin: 0;
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    
+    
+    height: 100%;
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #c1ff72; 
+    color: #2c3e50; 
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+p {
+    color: #6b7b8b; 
+    text-align: center;
+}
+
+a {
+    color: #ff6b6b; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #c1ff72 0%, #b2e64d 25%, #91c854 50%, #6ca639 75%, #4b8a1e 100%);
+}
+
+/* header section starts here ----------------------------------------------------------------- */
+        .header-conatainer {
+            text-align: center;
         }
 
-    body 
-    {
-        font-family: "Helvetica Neue", Arial, sans-serif;
-        padding: 20px;
-        background-color: #c1ff72; 
-        color: #2c3e50; 
-    }
-    h1,h2,h3 {
+        .header-title {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
 
-        color: #2c3e50;
-        text-align: center;
-    }
-    p {
-        color: #6b7b8b; 
-        text-align: center;
-    }
-    a {
-        color: #ff6b6b; 
-    }
+        .slogan {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
 
-.container
- {
-    display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 1.2rem;
-	width: 100%;
-	padding: 20px 15px;
-	margin-right: auto;
-	margin-left: auto;
-	background: linear-gradient(
-		135deg,
-		#c1ff72 0%,
-		#b2e64d 25%,
-		#91c854 50%,
-		#6ca639 75%,
-		#4b8a1e 100%
-	);
-	background-color: #c1ff72;
- }
-/* ---- Header section starts here --------------*/
+        .instructions-p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
 
-    .header-conatainer {
-        text-align: center;
-    }
+/*------------- letters Buttons section starts here ------------------------------------ */
 
-    .header-title {
-        font-size: 3rem;
-    }
+        .alphabet-buttons-container {
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
 
-    .slogan {
-        font-size: 1.5rem;
-    }
-    .instructions-p {
-        font-size: 1.2rem;
-    }
+        .letter-btn {
+            width: 48px;
+            height: 48px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            background-color: #4b8a1e;
+            color: white;
+            transition: background-color 0.3s;
+        }
 
-/*---- letters sectiion starts here ---------*/
+        .letter-btn:hover {
+            background-color: #6ca639;
+        }
 
-    .alphabet-buttons-container {
+/* hangman Img section Starts here----------------------------------- */
 
-        max-width: 800px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 0.5;
+        .hangman-figure-container {
+            max-width: 500px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #a9c1a2; 
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f4f4f4;
+        }
 
-    }
+        .hangman-img {
+            width: 100%;
+        }
 
-    .letter-btn {
+/* ----------------------------------------------------------------------------*/
 
-        max-width: 48px;
-        width: 100%;
-        font-weight: bold;
-        border: none;
-        border-radius: 5px;
-        padding: 0.5rem 1rem;
-        font-size: 1.2rem;
-        cursor: pointer;
-        margin-top: 5px;
-        margin-left: 0.2rem;
-
-    }
-
-/* --- Hang Man img starts here -------------------------*/
-
-    .hangman-figure-container {
-
-        max-width: 500px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid #a9c1a2; 
-        padding: 15px;
-        border-radius: 8px;
-        
-    }
-    .hangman-img {
-        width: 100%;
-    }
-
-/*------- hint & play again starts here ------ */
-
-    help-play-agani-btn-container {
-        display: flex;
-        max-width: 500px;
-        width: 100%;
-        background-color: #c1ff72;
-
-    }
     .hint-p {
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
-    }
-    .word-to-guess {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-        letter-spacing: 1rem;
+        color: #2c3e50;
     }
 
-/* ---- hint & play again  buttons starts here ------*/
+    .word-to-guess {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        letter-spacing: 1rem;
+        color: #2c3e50;
+}
+
+/* play again and hint Buttons  starts here -----------------------------------------*/
 
     button {
         background-color: #4b8a1e; 
@@ -143,25 +136,29 @@
         border-radius: 5px;
         cursor: pointer;
         font-size: 1.5rem;
+        transition: background-color 0.3s;
+        margin: 0.5rem;
     }
-    button:hover 
-    {
+
+    button:hover {
         background-color: #6ca639; 
     }
-    .border-box {
-        
-        border: 1px solid #a9c1a2; 
-        padding: 15px;
-        border-radius: 8px;
-    }
-/* --- Disabled buttons ------*/
-    .disabled-button {
-        opacity: 0.5;
-        cursor: not-allowed;
-        pointer-events: none;
-      }
 
-/* Responsive breakpoints ------------------ */
+    .help-play-again-btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+/* disabled buttons------------------------------- */
+.disabled-button {    /* thid will be added to buttons dynamically through js to diable clicked buttons*/
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* media quires start here ----------------------------------------------------------------------------*/
+
         @media (min-width: 576px) {
             .container {
                 max-width: 540px;
