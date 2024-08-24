@@ -1,5 +1,11 @@
 # Create a hangman game
 
+## Go live :
+https://mosnad-web01.github.io/Ahmed-Al-Sanadi--hangman-game/
+
+###Notes :
+ 1- Hint functionality is not working yet.
+----------------------------------------------------------------------------- 
 ## Overview
 Create a hangman game! <br>
 Example of what we want to accomplish [here](https://codepen.io/cathydutton/pen/ldazc). You can use it to know exactly what the game is about, but do not copy it. Use your own way. Be as creative as you can!
