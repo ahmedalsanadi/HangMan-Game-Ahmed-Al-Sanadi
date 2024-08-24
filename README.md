@@ -4,7 +4,7 @@
 https://mosnad-web01.github.io/Ahmed-Al-Sanadi--hangman-game/
 
 ###Notes :
- 1- Hint functionality is not working yet.
+ 1- Everything is working now.
 ----------------------------------------------------------------------------- 
 ## Overview
 Create a hangman game! <br>

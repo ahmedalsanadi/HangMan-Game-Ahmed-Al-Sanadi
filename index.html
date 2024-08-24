@@ -4,47 +4,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Hangman Game</title>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
   <main class="container">
-
-    <header class="header-conatainer">
+    <header class="header-container">
       <h1 class="header-title">HANGMAN</h1>
       <p class="slogan">Guess the word to save a life.</p>
       <p class="instructions-p">Use the alphabet below to guess the word, or click hint to get a clue.</p>
     </header>
-
-    <section class="alphabet-buttons-container" data-aos="fade-left">
-
-      
-    
-
-    </section>
-
-    <section class="word-to-guess-conatiner" data-aos="fade-right">
-      <p class="hint-p">Hint Holder</p>
-      
-      <p class="word-to-guess answer-field"></p>
-    </section>
-
     <h2 class="your-lifes">You Have <span class="life-count">10</span> lifes</h2>
-
 
     <figure class="hangman-figure-container" data-aos="zoom-in-up">
       <img class="hangman-img" src="./images/step0.png" alt="HANGMAN">
     </figure>
 
-    <div class="help-play-agani-btn-container">
+    <section class="word-to-guess-container" data-aos="fade-right">
+      <p class="hint-p">Hint Holder</p>
+      <p class="word-to-guess answer-field"></p>
+    </section>
+
+    <section class="alphabet-buttons-container" data-aos="fade-left">
+      <!-- Alphabet buttons will be here -->
+    </section>
+
+    <div class="help-play-again-btn-container">
       <button class="hint-btn">Hint</button>
       <button class="play-again-btn">Play again</button>
     </div>
-
   </main>
+  <!-- Win Modal -->
+  <div id="winModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Congratulations!</h2>
+      <p>You've guessed the word correctly!</p>
+      <button class="modal-btn">Play Again</button>
+    </div>
+  </div>
 
+  <!-- Lose Modal -->
+  <div id="loseModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Game Over</h2>
+      <p>Sorry, you didn't guess the word. Better luck next time!</p>
+      <button class="modal-btn">Try Again</button>
+    </div>
+  </div>
 
   <script src="./scripts/script.js"></script>
   <!--Animation Script-->
@@ -53,8 +63,8 @@
     AOS.init({
       offset: 200,
       delay: 400,
-      mirror: "false",
-      once: "true"
+      mirror: false,
+      once: true
     });
   </script>
 </body>

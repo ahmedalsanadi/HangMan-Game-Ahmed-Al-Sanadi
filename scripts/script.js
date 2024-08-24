@@ -1,14 +1,24 @@
 let randomWord = "";
+let currentHint = "";
 const wordArr = [];
 let lifeOnDanger = 0;
 let lifeCounter = 10;
 const wrongLetters = [];
-const answerField = document.querySelector(".answer-field "); // where blanks and  correct letters are place
+const answerField = document.querySelector(".answer-field");
 const HangmanImg = document.querySelector(".hangman-img");
 const remainingLifesSpan = document.querySelector(".life-count");
+const hintElement = document.querySelector(".hint-p");
+const hintButton = document.querySelector(".hint-btn");
+
+const winModal = document.getElementById("winModal");
+const loseModal = document.getElementById("loseModal");
+const closeButtons = document.querySelectorAll(".close-btn");
+const modalButtons = document.querySelectorAll(".modal-btn");
+
 document.querySelector(".play-again-btn").addEventListener("click", () => {
-    resetGame();
+	resetGame();
 });
+
 const letters = [
 	"a",
 	"b",
@@ -40,23 +50,39 @@ const letters = [
 
 document.addEventListener("DOMContentLoaded", () => {
 	ControlleringWholeApp();
+	hintButton.addEventListener("click", displayHint);
 });
 
-/* --- this Function will controll the whole app (Father for all functions) -----*/
+/* --- this Function will control the whole app (Father for all functions) -----*/
 async function ControlleringWholeApp() {
 	createAlphabetKeys(letters); // print letters buttons
-	randomWord = await fetchRandomWord(); //get the random word via API
-	createBlanks(randomWord); //creating blanks according to the lemgth of the random word.
+	const wordData = await fetchRandomWord(); // get the random word and hint via JSON
+	randomWord = wordData.word.toUpperCase();
+	currentHint = wordData.hint;
+	createBlanks(randomWord); // creating blanks according to the length of the random word.
+	hintElement.textContent = ""; // Clear any previous hint
 }
 
 async function fetchRandomWord() {
-	const response = await fetch("https://random-word-api.herokuapp.com/word?number=2");
-	const data = await response.json();
-	console.log("Random Word is :"+data[0]);
-	return data[0]; // this returns the random word as a string
+	try {
+		const response = await fetch("./scripts/db.json");
+		const data = await response.json();
+		//getw random word from JSON -----------------------------------------
+		const randomWordObj =
+			data.words[Math.floor(Math.random() * data.words.length)];
+		const randomWord = randomWordObj.word.toUpperCase(); // check if word is in uppercase
+		const hint = randomWordObj.hint;
+
+		console.log("Random Word is: " + randomWord);
+		return { word: randomWord, hint: hint }; // Return both word and hint
+	} catch (error) {
+		console.error("Error fetching the JSON file:", error);
+		return { word: "ERROR", hint: "No hint available." };
+	}
 }
+
 function createBlanks(word) {
-	// recieve random word and print blanks according to its length
+	// Receive random word and print blanks according to its length
 	const randomWordLength = word.length;
 	wordArr.length = 0; // clear the wordArr
 	for (let i = 0; i < randomWordLength; i++) {
@@ -66,94 +92,112 @@ function createBlanks(word) {
 }
 
 function createAlphabetKeys(lettersArray) {
-    const alphabetButtonConatainer = document.querySelector(".alphabet-buttons-container");
-    
-    // Clear the existing buttons before creating new ones
-    alphabetButtonConatainer.innerHTML = "";
+	const alphabetButtonContainer = document.querySelector(
+		".alphabet-buttons-container"
+	);
 
-    lettersArray.forEach((letter) => {
-        const letterBtn = document.createElement("button");
-        letterBtn.classList.add("letter-btn"); // for styling
-        letterBtn.id = letter;
-        letterBtn.innerHTML = letter;
-        alphabetButtonConatainer.appendChild(letterBtn);
-        letterBtn.addEventListener("click", () => {
-            onLetterClick(letterBtn, letter);
-        });
-    });
+	// Clear the existing buttons before creating new ones
+	alphabetButtonContainer.innerHTML = "";
+
+	lettersArray.forEach((letter) => {
+		const letterBtn = document.createElement("button");
+		letterBtn.classList.add("letter-btn"); // for styling
+		letterBtn.id = letter;
+		letterBtn.innerHTML = letter;
+		alphabetButtonContainer.appendChild(letterBtn);
+		letterBtn.addEventListener("click", () => {
+			onLetterClick(letterBtn, letter.toUpperCase()); // Convert to uppercase to match the word
+		});
+	});
 }
+
 function onLetterClick(letterBtn, letter) {
-    letterBtn.classList.add("disabled-button"); 
-    const currentValueOfAnswer = answerField.textContent; 
-    const currentLetterAnswerArray = currentValueOfAnswer.split(" "); // create an array with letters of current answer
-    const randomWordArray = randomWord.split("");
+	letterBtn.classList.add("disabled-button");
+	const currentValueOfAnswer = answerField.textContent;
+	const currentLetterAnswerArray = currentValueOfAnswer.split(" ");
+	const randomWordArray = randomWord.split("");
 
-    if (randomWord.includes(letter)) {
-        console.log("true");
-        updateLetters(randomWordArray, letter);
-    } else {
-        lifeOnDanger++;
-        lifeOnDanger = lifeOnDanger <= 10 ? lifeOnDanger : 10;
-        let imgSrc = `./images/step${lifeOnDanger}.png`;
-        HangmanImg.src = imgSrc;
+	if (randomWord.includes(letter)) {
+		updateLetters(randomWordArray, letter);
+	} else {
+		lifeOnDanger++;
+		let imgSrc = `./images/step${lifeOnDanger}.png`;
+		HangmanImg.src = imgSrc;
 
-        lifeCounter--;
-        lifeCounter = lifeCounter >= 0 ? lifeCounter : 0;
-        remainingLifesSpan.innerHTML = lifeCounter;
+		lifeCounter--;
+		remainingLifesSpan.innerHTML = lifeCounter;
 
-        if (lifeCounter === 0) {
-            // Disable all the buttons
-            const buttons = document.querySelectorAll(".letter-btn");
-            buttons.forEach((btn) => btn.classList.add("disabled-button"));
-
-            // Display the missed letters
-            let newAnswerField = "";
-            randomWordArray.forEach((char, index) => {
-                if (currentLetterAnswerArray[index] === "_" && !randomWordArray.includes(currentLetterAnswerArray[index])) {
-                    newAnswerField += `<span style="color:red;">${char}</span> `;
-                } else {
-                    newAnswerField += `${currentLetterAnswerArray[index]} `;
-                }
-            });
-            answerField.innerHTML = newAnswerField.trim();
-        }
-    }
+		if (lifeCounter === 0) {
+			showLoseModal();
+		}
+	}
 }
 
 function updateLetters(randomWordArr, letter) {
-	const indices = []; // this will save the indexs where the correct letter is found in the randword word
+	const indices = [];
 
-	// Find all the indices where the letter appears in the randomWordArr
 	randomWordArr.forEach((char, index) => {
 		if (char === letter) {
 			indices.push(index);
 		}
 	});
 
-	// Update the wordArr based on the found indices
 	indices.forEach((index) => {
 		if (wordArr[index] === "_") {
 			wordArr[index] = letter;
 		}
 	});
 
-	// Update the answerField with the updated wordArr
 	answerField.innerHTML = wordArr.map((char) => char).join(" ");
+
+	if (!wordArr.includes("_")) {
+		showWinModal();
+	}
 }
 
-
+function displayHint() {
+	if (currentHint) {
+		hintElement.textContent = `Hint: ${currentHint}`;
+	} else {
+		hintElement.textContent = "No hint available.";
+	}
+}
 
 function resetGame() {
-    lifeCounter = 10; 
-    lifeOnDanger = 0; 
-    wrongLetters.length = 0; 
-    remainingLifesSpan.innerHTML = lifeCounter; 
-    HangmanImg.src = "./images/step0.png"; 
-    const buttons = document.querySelectorAll(".letter-btn");
-    buttons.forEach((btn) => {
-        btn.classList.remove("disabled-button");
-    });
+	lifeCounter = 10;
+	lifeOnDanger = 0;
+	wrongLetters.length = 0;
+	remainingLifesSpan.innerHTML = lifeCounter;
+	HangmanImg.src = "./images/step0.png";
+	hintElement.textContent = ""; // Clear the hint
+	const buttons = document.querySelectorAll(".letter-btn");
+	buttons.forEach((btn) => {
+		btn.classList.remove("disabled-button");
+	});
 
-    
-    ControlleringWholeApp(); 
+	ControlleringWholeApp();
+}
+
+// Modals code starts here ----------------------------------------------------------------------//
+
+function showWinModal() {
+	winModal.style.display = "flex";
+}
+
+function showLoseModal() {
+	loseModal.style.display = "flex";
+}
+
+closeButtons.forEach((btn) => {
+	btn.addEventListener("click", closeModal);
+});
+
+modalButtons.forEach((btn) => {
+	btn.addEventListener("click", closeModal);
+});
+
+function closeModal() {
+	winModal.style.display = "none";
+	loseModal.style.display = "none";
+	resetGame();
 }

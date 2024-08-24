@@ -1,0 +1,671 @@
+{
+    "words": [
+      {
+        "word": "JAVASCRIPT",
+        "hint": "A popular programming language used for web development"
+      },
+      {
+        "word": "APPLE",
+        "hint": "A popular tech company known for its iPhones and MacBooks"
+      },
+      {
+        "word": "MOUNTAIN",
+        "hint": "A large natural elevation of the earth's surface rising abruptly from the surrounding level"
+      },
+      {
+        "word": "LIBRARY",
+        "hint": "A building or room containing collections of books, periodicals, and sometimes films and recorded music for people to read, borrow, or refer to"
+      },
+      {
+        "word": "SUNSET",
+        "hint": "The daily disappearance of the sun below the horizon in the evening"
+      },
+      {
+        "word": "GUITAR",
+        "hint": "A stringed musical instrument typically played with the fingers or a pick"
+      },
+      {
+        "word": "PENGUIN",
+        "hint": "A flightless seabird found in the southern hemisphere, typically having black and white plumage"
+      },
+      {
+        "word": "DRAGON",
+        "hint": "A mythical monster depicted as a gigantic, winged, fire-breathing reptile"
+      },
+      {
+        "word": "RAINBOW",
+        "hint": "A multicolored arc-shaped phenomenon that appears in the sky after rain"
+      },
+      {
+        "word": "SNOWFLAKE",
+        "hint": "A tiny, delicate ice crystal that falls from clouds during cold weather"
+      },
+
+      {
+        "word": "javascript",
+        "hint": "a popular programming language used for web development"
+      },
+      {
+        "word": "python",
+        "hint": "a versatile programming language known for its readability"
+      },
+      {
+        "word": "mountain",
+        "hint": "a large natural elevation of the earth's surface rising abruptly from the surrounding level"
+      },
+      {
+        "word": "library",
+        "hint": "a building or room containing collections of books, periodicals, and sometimes films and recorded music for people to read, borrow, or refer to"
+      },
+      {
+        "word": "sunset",
+        "hint": "the daily disappearance of the sun below the horizon in the evening"
+      },
+      {
+        "word": "guitar",
+        "hint": "a stringed musical instrument typically played with the fingers or a pick"
+      },
+      {
+        "word": "penguin",
+        "hint": "a flightless seabird found in the southern hemisphere, typically having black and white plumage"
+      },
+      {
+        "word": "dragon",
+        "hint": "a mythical monster depicted as a gigantic, winged, fire-breathing reptile"
+      },
+      {
+        "word": "rainbow",
+        "hint": "a multicolored arc-shaped phenomenon that appears in the sky after rain"
+      },
+      {
+        "word": "snowflake",
+        "hint": "a tiny, delicate ice crystal that falls from clouds during cold weather"
+      },
+      {
+        "word": "apple",
+        "hint": "a popular tech company known for its iphones and macbooks"
+      },
+      {
+        "word": "computer",
+        "hint": "an electronic device that can perform a variety of operations automatically, especially one that can receive, store, and process data"
+      },
+      {
+        "word": "bicycle",
+        "hint": "a vehicle with two wheels that is propelled by the rider pedaling"
+      },
+      {
+        "word": "volcano",
+        "hint": "a mountain or hill, typically conical in shape, having a crater or vent through which lava, rock fragments, hot vapor, and gas are or have been erupted from the earth's interior"
+      },
+      {
+        "word": "telescope",
+        "hint": "an optical instrument designed to make distant objects appear nearer, containing an arrangement of lenses, or of curved mirrors and lenses, by which light is collected and focused and the resulting image magnified"
+      },
+      {
+        "word": "galaxy",
+        "hint": "a system of millions or billions of stars, together with gas and dust, held together by gravitational attraction"
+      },
+      {
+        "word": "dolphin",
+        "hint": "a small, toothed whale that typically has a streamlined body and a beak-like snout"
+      },
+      {
+        "word": "violin",
+        "hint": "a stringed musical instrument played with a bow, that has a body of wood, four strings, and a fingerboard"
+      },
+      {
+        "word": "waterfall",
+        "hint": "a steep fall of water in a river or stream"
+      },
+      {
+        "word": "diamond",
+        "hint": "a precious, highly valued stone that is the hardest known natural material on earth"
+      },
+      {
+        "word": "camera",
+        "hint": "a device used to take photographs, consisting of a lightproof box with a lens at one end and light-sensitive film or a digital sensor at the other"
+      },
+      {
+        "word": "mushroom",
+        "hint": "the fleshy, spore-bearing fruiting body of a fungus, typically produced above ground on soil or on its food source"
+      },
+      {
+        "word": "tornado",
+        "hint": "a violently rotating column of air that is in contact with both the surface of the earth and a cumulonimbus cloud"
+      },
+      {
+        "word": "pyramid",
+        "hint": "a monumental, four-sided, steep-sided structure with a square or rectangular base and a pointed apex, built by the ancient egyptians as a tomb and monument"
+      },
+      {
+        "word": "submarine",
+        "hint": "a watercraft capable of independent undersea operation"
+      },
+      {
+        "word": "skyscraper",
+        "hint": "a very tall, multistoried building"
+      },
+      {
+        "word": "keyboard",
+        "hint": "a set of keys used to operate a computer or typewriter"
+      },
+      {
+        "word": "universe",
+        "hint": "all existing matter and space considered as a whole; the cosmos"
+      },
+      {
+        "word": "telescope",
+        "hint": "an optical instrument designed to make distant objects appear nearer, containing an arrangement of lenses, or of curved mirrors and lenses, by which light is collected and focused and the resulting image magnified"
+      },
+      {
+        "word": "butterfly",
+        "hint": "a flying insect with a slender body and broad, colorful wings"
+      },
+      {
+        "word": "bumblebee",
+        "hint": "a large, hairy bee that makes a loud buzzing sound in flight"
+      },
+      {
+        "word": "fireplace",
+        "hint": "an open recess in a wall at the base of a chimney where a fire is built"
+      },
+      {
+        "word": "skateboard",
+        "hint": "a narrow board mounted on small wheels, used for riding and performing stunts"
+      },
+      {
+        "word": "hurricane",
+        "hint": "a violent, tropical cyclone in the atlantic ocean"
+      },
+      {
+        "word": "telescope",
+        "hint": "an optical instrument designed to make distant objects appear nearer, containing an arrangement of lenses, or of curved mirrors and lenses, by which light is collected and focused and the resulting image magnified"
+      },
+      {
+        "word": "lighthouse",
+        "hint": "a tower, usually with a powerful light at the top, built near the shore to warn or guide ships"
+      },
+      {
+        "word": "snowflake",
+        "hint": "a tiny, delicate ice crystal that falls from clouds during cold weather"
+      },
+      {
+        "word": "telescope",
+        "hint": "an optical instrument designed to make distant objects appear nearer, containing an arrangement of lenses, or of curved mirrors and lenses, by which light is collected and focused and the resulting image magnified"
+      },
+      {
+        "word": "snowflake",
+        "hint": "a tiny, delicate ice crystal that falls from clouds during cold weather"
+      },
+      {
+        "word": "telescope",
+        "hint": "an optical instrument designed to make distant objects appear nearer, containing an arrangement of lenses, or of curved mirrors and lenses, by which light is collected and focused and the resulting image magnified"
+      },
+      {
+        "word": "snowflake",
+        "hint": "a tiny, delicate ice crystal that falls from clouds during cold weather"
+      },
+      {
+        "word": "tokyo",
+        "hint": "the capital city of japan, known for its bustling metropolis and advanced technology"
+      },
+      {
+        "word": "london",
+        "hint": "the capital city of the united kingdom, renowned for its rich history and diverse culture"
+      },
+      {
+        "word": "paris",
+        "hint": "the capital city of france, famous for its romantic atmosphere and iconic landmarks"
+      },
+      {
+        "word": "new york",
+        "hint": "the largest city in the united states, a global center of finance, media, and culture"
+      },
+      {
+        "word": "moscow",
+        "hint": "the capital city of russia, home to the kremlin and red square"
+      },
+      {
+        "word": "sydney",
+        "hint": "the largest city in australia, known for its stunning harbor and iconic opera house"
+      },
+      {
+        "word": "rome",
+        "hint": "the capital city of italy, with a rich history dating back to ancient times"
+      },
+      {
+        "word": "berlin",
+        "hint": "the capital city of germany, a hub of art, music, and political history"
+      },
+      {
+        "word": "beijing",
+        "hint": "the capital city of china, home to the forbidden city and the great wall"
+      },
+      {
+        "word": "madrid",
+        "hint": "the capital city of spain, renowned for its vibrant culture and delicious cuisine"
+      },
+      {
+        "word": "toronto",
+        "hint": "the largest city in canada, a multicultural hub with a thriving arts and entertainment scene"
+      },
+      {
+        "word": "mexico city",
+        "hint": "the capital city of mexico, with a rich indigenous history and vibrant cultural heritage"
+      },
+      {
+        "word": "mumbai",
+        "hint": "the largest city in india, a bustling financial and entertainment center"
+      },
+      {
+        "word": "cairo",
+        "hint": "the capital city of egypt, home to the iconic pyramids and the nile river"
+      },
+      {
+        "word": "seoul",
+        "hint": "the capital city of south korea, a global leader in technology and pop culture"
+      },
+      {
+        "word": "istanbul",
+        "hint": "the largest city in turkey, straddling both europe and asia with a rich cultural legacy"
+      },
+      {
+        "word": "rio de janeiro",
+        "hint": "the second-largest city in brazil, famous for its iconic beaches and carnival celebrations"
+      },
+      {
+        "word": "lagos",
+        "hint": "the largest city in nigeria, a major economic and cultural hub in africa"
+      },
+      {
+        "word": "buenos aires",
+        "hint": "the capital city of argentina, renowned for its european-influenced architecture and vibrant tango culture"
+      },
+      {
+        "word": "bangkok",
+        "hint": "the capital city of thailand, a bustling metropolis known for its ornate temples and lively street life"
+      },
+      {
+        "word": "los angeles",
+        "hint": "the second-largest city in the united states, a global center of the entertainment industry"
+      },
+      {
+        "word": "dubai",
+        "hint": "the largest city in the united arab emirates, a modern, cosmopolitan city known for its skyscrapers and luxury lifestyle"
+      },
+      {
+        "word": "chicago",
+        "hint": "the third-largest city in the united states, famous for its architecture, museums, and vibrant arts scene"
+      },
+      {
+        "word": "singapore",
+        "hint": "a city-state in southeast asia, known for its cleanliness, efficient infrastructure, and diverse ethnic neighborhoods"
+      },
+      {
+        "word": "sydney",
+        "hint": "the largest city in australia, known for its stunning harbor and iconic opera house"
+      },
+      {
+        "word": "moscow",
+        "hint": "the capital city of russia, home to the kremlin and red square"
+      },
+      {
+        "word": "tokyo",
+        "hint": "the capital city of japan, known for its bustling metropolis and advanced technology"
+      },
+      {
+        "word": "london",
+        "hint": "the capital city of the united kingdom, renowned for its rich history and diverse culture"
+      },
+      {
+        "word": "paris",
+        "hint": "the capital city of france, famous for its romantic atmosphere and iconic landmarks"
+      },
+      {
+        "word": "new york",
+        "hint": "the largest city in the united states, a global center of finance, media, and culture"
+      },
+      {
+        "word": "moscow",
+        "hint": "the capital city of russia, home to the kremlin and red square"
+      },
+      {
+        "word": "sydney",
+        "hint": "the largest city in australia, known for its stunning harbor and iconic opera house"
+      },
+      {
+        "word": "rome",
+        "hint": "the capital city of italy, with a rich history dating back to ancient times"
+      },
+      {
+        "word": "berlin",
+        "hint": "the capital city of germany, a hub of art, music, and political history"
+      },
+      {
+        "word": "beijing",
+        "hint": "the capital city of china, home to the forbidden city and the great wall"
+      },
+      {
+        "word": "madrid",
+        "hint": "the capital city of spain, renowned for its vibrant culture and delicious cuisine"
+      },
+      {
+        "word": "toronto",
+        "hint": "the largest city in canada, a multicultural hub with a thriving arts and entertainment scene"
+      },
+      {
+        "word": "mexico city",
+        "hint": "the capital city of mexico, with a rich indigenous history and vibrant cultural heritage"
+      },
+      {
+        "word": "mumbai",
+        "hint": "the largest city in india, a bustling financial and entertainment center"
+      },
+      {
+        "word": "cairo",
+        "hint": "the capital city of egypt, home to the iconic pyramids and the nile river"
+      },
+      {
+        "word": "seoul",
+        "hint": "the capital city of south korea, a global leader in technology and pop culture"
+      },
+      {
+        "word": "apple",
+        "hint": "a popular fruit that grows on trees"
+      },
+      {
+        "word": "guitar",
+        "hint": "a musical instrument with strings that is played with the hands"
+      },
+      {
+        "word": "ocean",
+        "hint": "a vast body of salt water that covers much of the earth's surface"
+      },
+      {
+        "word": "rainbow",
+        "hint": "a colorful arc of light that appears in the sky after rain"
+      },
+      {
+        "word": "telescope",
+        "hint": "an instrument used to observe distant objects in the sky"
+      },
+      {
+        "word": "dinosaur",
+        "hint": "a large, extinct reptile that lived millions of years ago"
+      },
+      {
+        "word": "library",
+        "hint": "a building or room containing a collection of books for public use"
+      },
+      {
+        "word": "galaxy",
+        "hint": "a vast system of stars, gas, and dust held together by gravity"
+      },
+      {
+        "word": "sunflower",
+        "hint": "a tall plant with large, yellow flowers that follow the sun"
+      },
+      {
+        "word": "violin",
+        "hint": "a bowed string instrument used in orchestras and chamber music"
+      },
+      {
+        "word": "mountain",
+        "hint": "a large natural elevation of the earth's surface rising abruptly from the surrounding level"
+      },
+      {
+        "word": "penguin",
+        "hint": "a flightless seabird found in the southern hemisphere"
+      },
+      {
+        "word": "astronaut",
+        "hint": "a person trained to travel in a spacecraft"
+      },
+      {
+        "word": "keyboard",
+        "hint": "a set of keys on a computer or musical instrument used for input or playing notes"
+      },
+      {
+        "word": "poetry",
+        "hint": "literary work in which special intensity is given to the expression of feelings and ideas"
+      },
+      {
+        "word": "volcano",
+        "hint": "a mountain or hill, typically cone-shaped, with a crater or vent through which lava, rock fragments, hot vapor, and gas are or have been erupted from the earth's interior"
+      },
+      {
+        "word": "tornado",
+        "hint": "a violently rotating column of air that extends from a thunderstorm to the ground"
+      },
+      {
+        "word": "snowflake",
+        "hint": "a delicate, branching crystal of ice that forms in cold clouds"
+      },
+      {
+        "word": "saxophone",
+        "hint": "a woodwind instrument with a single reed and a distinctive, mellow tone"
+      },
+      {
+        "word": "butterfly",
+        "hint": "a flying insect with a slender body and two pairs of broad, often colorful, wings"
+      },
+      {
+        "word": "treasure",
+        "hint": "wealth or valuable objects stored or hidden, especially by a person"
+      },
+      {
+        "word": "spaghetti",
+        "hint": "a type of long, thin pasta, typically served with a sauce"
+      },
+      {
+        "word": "autumn",
+        "hint": "the season of the year between summer and winter, in which temperatures gradually decrease"
+      },
+      {
+        "word": "keyboard",
+        "hint": "a set of keys on a computer or musical instrument used for input or playing notes"
+      },
+      {
+        "word": "chemistry",
+        "hint": "the study of the properties, composition, and behavior of matter"
+      },
+      {
+        "word": "waterfall",
+        "hint": "a steep fall of water in a river or stream"
+      },
+      {
+        "word": "playground",
+        "hint": "an outdoor area provided for children to play in, usually equipped with swings, slides, and other apparatus"
+      },
+      {
+        "word": "astronaut",
+        "hint": "a person trained to travel in a spacecraft"
+      },
+      {
+        "word": "saxophone",
+        "hint": "a woodwind instrument with a single reed and a distinctive, mellow tone"
+      },
+      {
+        "word": "butterfly",
+        "hint": "a flying insect with a slender body and two pairs of broad, often colorful, wings"
+      },
+      {
+        "word": "treasure",
+        "hint": "wealth or valuable objects stored or hidden, especially by a person"
+      },
+      {
+        "word": "spaghetti",
+        "hint": "a type of long, thin pasta, typically served with a sauce"
+      },
+      {
+        "word": "autumn",
+        "hint": "the season of the year between summer and winter, in which temperatures gradually decrease"
+      },
+      {
+        "word": "keyboard",
+        "hint": "a set of keys on a computer or musical instrument used for input or playing notes"
+      },
+      {
+        "word": "chemistry",
+        "hint": "the study of the properties, composition, and behavior of matter"
+      },
+      {
+        "word": "waterfall",
+        "hint": "a steep fall of water in a river or stream"
+      },
+      {
+        "word": "playground",
+        "hint": "an outdoor area provided for children to play in, usually equipped with swings, slides, and other apparatus"
+      },
+      {
+        "word": "telescope",
+        "hint": "an instrument used to observe distant objects in the sky"
+      },
+      {
+        "word": "volcano",
+        "hint": "a mountain or hill, typically cone-shaped, with a crater or vent through which lava, rock fragments, hot vapor, and gas are or have been erupted from the earth's interior"
+      },
+      {
+        "word": "violin",
+        "hint": "a bowed string instrument used in orchestras and chamber music"
+      },
+      {
+        "word": "poetry",
+        "hint": "literary work in which special intensity is given to the expression of feelings and ideas"
+      },
+      {
+        "word": "tornado",
+        "hint": "a violently rotating column of air that extends from a thunderstorm to the ground"
+      },
+      {
+        "word": "snowflake",
+        "hint": "a delicate, branching crystal of ice that forms in cold clouds"
+      },
+      {
+        "word": "saxophone",
+        "hint": "a woodwind instrument with a single reed and a distinctive, mellow tone"
+      },
+      {
+        "word": "butterfly",
+        "hint": "a flying insect with a slender body and two pairs of broad, often colorful, wings"
+      },
+      {
+        "word": "treasure",
+        "hint": "wealth or valuable objects stored or hidden, especially by a person"
+      },
+      {
+        "word": "spaghetti",
+        "hint": "a type of long, thin pasta, typically served with a sauce"
+      },
+      {
+        "word": "autumn",
+        "hint": "the season of the year between summer and winter, in which temperatures gradually decrease"
+      },
+      {
+        "word": "keyboard",
+        "hint": "a set of keys on a computer or musical instrument used for input or playing notes"
+      },
+      {
+        "word": "chemistry",
+        "hint": "the study of the properties, composition, and behavior of matter"
+      },
+      {
+        "word": "waterfall",
+        "hint": "a steep fall of water in a river or stream"
+      },
+      {
+        "word": "playground",
+        "hint": "an outdoor area provided for children to play in, usually equipped with swings, slides, and other apparatus"
+      },
+      {
+        "word": "microscope",
+        "hint": "an optical instrument used for examining very small objects that cannot be seen easily with the naked eye"
+      },
+      {
+        "word": "symphony",
+        "hint": "a long, complex musical composition for a full orchestra"
+      },
+      {
+        "word": "lighthouse",
+        "hint": "a tower with a powerful light at the top, built to guide ships at sea"
+      },
+      {
+        "word": "hurricane",
+        "hint": "a large, powerful, and destructive storm with very strong winds"
+      },
+      {
+        "word": "skyscraper",
+        "hint": "a very tall, multistoried building in a city"
+      },
+      {
+        "word": "origami",
+        "hint": "the art of folding paper into decorative shapes and figures"
+      },
+      {
+        "word": "telescope",
+        "hint": "an instrument used to observe distant objects in the sky"
+      },
+      {
+        "word": "volcano",
+        "hint": "a mountain or hill, typically cone-shaped, with a crater or vent through which lava, rock fragments, hot vapor, and gas are or have been erupted from the earth's interior"
+      },
+      {
+        "word": "violin",
+        "hint": "a bowed string instrument used in orchestras and chamber music"
+      },
+      {
+        "word": "poetry",
+        "hint": "literary work in which special intensity is given to the expression of feelings and ideas"
+      },
+      {
+        "word": "tornado",
+        "hint": "a violently rotating column of air that extends from a thunderstorm to the ground"
+      },
+      {
+        "word": "snowflake",
+        "hint": "a delicate, branching crystal of ice that forms in cold clouds"
+      },
+      {
+        "word": "saxophone",
+        "hint": "a woodwind instrument with a single reed and a distinctive, mellow tone"
+      },
+      {
+        "word": "butterfly",
+        "hint": "a flying insect with a slender body and two pairs of broad, often colorful, wings"
+      },
+      {
+        "word": "treasure",
+        "hint": "wealth or valuable objects stored or hidden, especially by a person"
+      },
+      {
+        "word": "spaghetti",
+        "hint": "a type of long, thin pasta, typically served with a sauce"
+      },
+      {
+        "word": "autumn",
+        "hint": "the season of the year between summer and winter, in which temperatures gradually decrease"
+      },
+      {
+        "word": "keyboard",
+        "hint": "a set of keys on a computer or musical instrument used for input or playing notes"
+      },
+      {
+        "word": "chemistry",
+        "hint": "the study of the properties, composition, and behavior of matter"
+      },
+      {
+        "word": "waterfall",
+        "hint": "a steep fall of water in a river or stream"
+      },
+      {
+        "word": "playground",
+        "hint": "an outdoor area provided for children to play in, usually equipped with swings, slides, and other apparatus"
+      }
+    ]
+  }
+
+   
+     
+
+
+     
